@@ -2,3 +2,60 @@ services:
 #    app_admin.example:
 #        class: App\AdminBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+  admin.user:
+    public: true
+    class: App\Admin\UserAdmin
+    arguments: [~ , App\AdminBundle\Entity\User, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'User' }
+
+  admin.disease:
+    public: true
+    class: App\Admin\DiseaseAdmin
+    arguments: [~ , App\AdminBundle\Entity\Disease, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Disease' }
+
+
+  admin.riding.school:
+    public: true
+    class: App\Admin\RidingSchoolAdmin
+    arguments: [~ , App\AdminBundle\Entity\RidingSchool, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'RidingSchool' }
+
+  admin.transaction:
+    public: true
+    class: App\Admin\TransactionAdmin
+    arguments: [~ , App\AdminBundle\Entity\Transaction, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Transaction' }
+
+  admin.club:
+    public: true
+    class: App\Admin\ClubAdmin
+    arguments: [~ , App\AdminBundle\Entity\Club, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Club' }
+
+  admin.breed:
+    public: true
+    class: App\Admin\BreedAdmin
+    arguments: [~ , App\AdminBundle\Entity\Breed, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Breed' }
+
+  admin.circuit:
+    public: true
+    class: App\Admin\CircuitAdmin
+    arguments: [~ , App\AdminBundle\Entity\Circuit, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Circuit' }
+
+  admin.show:
+    public: true
+    class: App\Admin\RidingShowAdmin
+    arguments: [~ , App\AdminBundle\Entity\RidingShow, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Show' }
