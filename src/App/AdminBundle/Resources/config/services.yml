@@ -59,3 +59,101 @@ services:
     arguments: [~ , App\AdminBundle\Entity\RidingShow, ~]
     tags:
       - { name: 'sonata.admin', manager_type: 'orm', label: 'Show' }
+
+  admin.horse:
+    public: true
+    class: App\Admin\HorseAdmin
+    arguments: [~ , App\AdminBundle\Entity\Horse, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Horse' }
+
+  admin.infrastructure:
+    public: true
+    class: App\Admin\InfrastructureAdmin
+    arguments: [~ , App\AdminBundle\Entity\Infrastructure, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Infrastructure' }
+
+  admin.infratype:
+    public: true
+    class: App\Admin\InfraTypeAdmin
+    arguments: [~ , App\AdminBundle\Entity\InfraType, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'InfraType' }
+
+  admin.wound:
+    public: true
+    class: App\Admin\WoundAdmin
+    arguments: [~ , App\AdminBundle\Entity\Wound, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Wound' }
+
+  admin.parasite:
+    public: true
+    class: App\Admin\ParasiteAdmin
+    arguments: [~ , App\AdminBundle\Entity\Parasite, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Parasite' }
+
+  admin.item:
+    public: true
+    class: App\Admin\ItemAdmin
+    arguments: [~ , App\AdminBundle\Entity\Item, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Item' }
+
+  admin.item.category:
+    public: true
+    class: App\Admin\ItemCategoryAdmin
+    arguments: [~ , App\AdminBundle\Entity\ItemCategory, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'ItemCategory' }
+
+  admin.item.news.horsesale:
+    public: true
+    class: App\Admin\ItemNewsHorsesaleAdmin
+    arguments: [~ , App\AdminBundle\Entity\ItemNewsHorsesale, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'ItemNewsHorsesale' }
+
+  admin.item.news.itemsale:
+    public: true
+    class: App\Admin\ItemNewsItemsaleAdmin
+    arguments: [~ , App\AdminBundle\Entity\ItemNewsItemsale, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'ItemNewsItemsale' }
+
+  admin.item.news.show:
+    public: true
+    class: App\Admin\ItemNewsShowAdmin
+    arguments: [~ , App\AdminBundle\Entity\ItemNewsShow, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'ItemNewsShow' }
+
+  admin.news:
+    public: true
+    class: App\Admin\NewsAdmin
+    arguments: [~ , App\AdminBundle\Entity\News, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'News' }
+
+  admin.quality:
+    public: true
+    class: App\Admin\QualityAdmin
+    arguments: [~ , App\AdminBundle\Entity\Quality, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Quality' }
+
+  admin.reward:
+    public: true
+    class: App\Admin\RewardAdmin
+    arguments: [~ , App\AdminBundle\Entity\Reward, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Reward' }
+
+  admin.task:
+    public: true
+    class: App\Admin\TaskAdmin
+    arguments: [~ , App\AdminBundle\Entity\Task, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', label: 'Task' }
