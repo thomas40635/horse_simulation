@@ -1,6 +1,7 @@
 <?php
 namespace App\Admin;
 
+use CustomAdmin;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -11,7 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
-final class UserAdmin extends AbstractAdmin
+final class UserAdmin extends CustomAdmin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
