@@ -41,13 +41,25 @@ twig:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver: pdo_mysql
-        host: '%database_host%'
-        port: '%database_port%'
-        dbname: '%database_name%'
-        user: '%database_user%'
-        password: '%database_password%'
-        charset: UTF8
+        default_connection: mysql
+        connections:
+            mysql:
+                driver: pdo_mysql
+                host: '%database_host%'
+                port: '%database_port%'
+                dbname: '%database_name%'
+                user: '%database_user%'
+                password: '%database_password%'
+                charset: UTF8
+            horse_simulation:
+                driver: pdo_mysql
+                host: '%database_host2%'
+                port: '%database_port2%'
+                dbname: '%database_name2%'
+                user: '%database_user2%'
+                password: '%database_password2%'
+                charset: UTF8
+
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
         #     e.g. database_path: '%kernel.project_dir%/var/data/data.sqlite'
@@ -56,9 +68,19 @@ doctrine:
         #path: '%database_path%'
 
     orm:
-        auto_generate_proxy_classes: '%kernel.debug%'
-        naming_strategy: doctrine.orm.naming_strategy.underscore
-        auto_mapping: true
+        default_entity_manager: mysql
+        entity_managers:
+            mysql:
+                connection: mysql
+                mappings:
+#                    AppPrivilegeBundle: ~
+            horse_simulation:
+                connection: horse_simulation
+                mappings:
+                    AppAdminBundle: ~
+#        auto_generate_proxy_classes: '%kernel.debug%'
+#        naming_strategy: doctrine.orm.naming_strategy.underscore
+#        auto_mapping: true
 
 # Swiftmailer Configuration
 swiftmailer:

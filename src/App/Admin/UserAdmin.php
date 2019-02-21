@@ -1,7 +1,7 @@
 <?php
 namespace App\Admin;
 
-use CustomAdmin;
+use Admin\CustomAdmin;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;

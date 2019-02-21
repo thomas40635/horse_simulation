@@ -1,5 +1,5 @@
 <?php
-
+namespace Admin;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 
 class CustomAdmin extends AbstractAdmin
@@ -10,6 +10,8 @@ class CustomAdmin extends AbstractAdmin
      */
     public function checkAccess($action, $object = null)
     {
+        dump($action);
+        dump($object);
         /*
          * Récupère un tableau avec la liste des accès disponibles
          */
