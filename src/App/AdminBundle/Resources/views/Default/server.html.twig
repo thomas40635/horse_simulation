@@ -1,0 +1,19 @@
+Actions sur le serveur
+<br>
+Voulez-vous : <br>
+{% if messages is not null %}
+    {{ messages }}
+{% endif %}
+<ul>
+    <li>
+        <a href="{{ path('start') }}">Démarrer le server mysql</a>
+    </li>
+    <li>
+        <a href="{{ path('stop') }}">Arrêter le server mysql</a>
+    </li>
+    <li>
+        <a href="{{ path('reload') }}">Recharger le server mysql</a>
+    </li>
+</ul>
+<a href="{{ path('index') }}">Retour</a>
+
