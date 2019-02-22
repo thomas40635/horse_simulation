@@ -59,6 +59,40 @@ class DefaultController extends Controller
     }
 
     /**
+     * Matches /showprocess
+     *
+     * @Route("/showprocess", name="showprocess")
+     */
+    public function ShowProcessAction()
+    {
+        $messages = shell_exec("mysql -u root -p;SHOW PROCESSLIST;");
+        if($messages == null){
+            $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";
+        }
+        return $this->render('@AppAdmin/Default/showprocess.html.twig', array(
+            'list' => $messages
+        ));
+    }
+
+    /**
+     * Matches /killprocess
+     *
+     * @Route("/killprocess", name="killprocess")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function KillProcessAction(Request $request)
+    {
+        $messages = shell_exec("mysql -u root -p;KILL".$request->get('process'));
+        if($messages == null){
+            $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";
+        }
+        return $this->render('@AppAdmin/Default/killprocess.html.twig', array(
+            'message' => $messages
+        ));
+    }
+
+    /**
      * Matches /server
      *
      * @Route("/server", name="server")

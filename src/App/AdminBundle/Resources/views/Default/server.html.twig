@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin - horsesimulation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
+</head>
+<body>
+
 Actions sur le serveur
 <br>
 Voulez-vous : <br>
@@ -15,5 +24,21 @@ Voulez-vous : <br>
         <a href="{{ path('reload') }}">Recharger le server mysql</a>
     </li>
 </ul>
+<ul>
+    <li>
+        <a id="show-process" href="{{ path('showprocess') }}">Voir la liste des processus utilisateurs</a>
+    <li>
+        KILL un process
+        <form method="POST" action="{{ path('killprocess') }}">
+            <label for="process">Entrer le numéro du process à tuer : </label>
+            <input id="process" type="number" name="process">
+            <input id="kill-process" type="submit">
+        </form>
+    </li>
+</ul>
 <a href="{{ path('index') }}">Retour</a>
+
+</body>
+</html>
+
 
