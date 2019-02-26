@@ -73,7 +73,7 @@ doctrine:
             mysql:
                 connection: mysql
                 mappings:
-#                    AppPrivilegeBundle: ~
+#                   AppPrivilegeBundle: ~
             horse_simulation:
                 connection: horse_simulation
                 mappings:

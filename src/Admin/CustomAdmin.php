@@ -10,8 +10,6 @@ class CustomAdmin extends AbstractAdmin
      */
     public function checkAccess($action, $object = null)
     {
-        dump($action);
-        dump($object);
         /*
          * Récupère un tableau avec la liste des accès disponibles
          */
@@ -33,10 +31,10 @@ class CustomAdmin extends AbstractAdmin
          * TODO
          * On vérifie que l'utilisateur à le droit d'accéder à la page (edit par exemple)
          */
-        /*
+
         if($action === 'edit'){
             throw new \Symfony\Component\Security\Core\Exception\AccessDeniedException('Accès non autorisé');
-        }*/
+        }
     }
 
     public function getAccess()

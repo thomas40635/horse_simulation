@@ -65,7 +65,9 @@ class DefaultController extends Controller
      */
     public function ShowProcessAction()
     {
-        $messages = shell_exec("mysql -u root -p;SHOW PROCESSLIST;");
+        $messages = shell_exec("mysql -u root -proot
+SHOW PROCESSLIST;
+");
         if($messages == null){
             $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";
         }
