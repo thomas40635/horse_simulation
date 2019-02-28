@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Admin - horsesimulation</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
-</head>
-<body>
-
-
+{% extends '@AppAdmin/base.html.twig' %}
+{% block body %}
 Bienvenue sur le tableau de bord.
 <br>
 Voulez-vous : <br>
@@ -19,6 +11,4 @@ Voulez-vous : <br>
         <a href="{{ path('server') }}">Effectuer des actions sur le serveur</a>
     </li>
 </ul>
-
-</body>
-</html>
+{% endblock %}
