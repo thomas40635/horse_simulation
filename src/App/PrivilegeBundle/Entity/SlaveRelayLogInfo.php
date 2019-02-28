@@ -71,5 +71,182 @@ class SlaveRelayLogInfo
     private $id;
 
 
-}
 
+    /**
+     * Set numberOfLines
+     *
+     * @param integer $numberOfLines
+     *
+     * @return SlaveRelayLogInfo
+     */
+    public function setNumberOfLines($numberOfLines)
+    {
+        $this->numberOfLines = $numberOfLines;
+
+        return $this;
+    }
+
+    /**
+     * Get numberOfLines
+     *
+     * @return integer
+     */
+    public function getNumberOfLines()
+    {
+        return $this->numberOfLines;
+    }
+
+    /**
+     * Set relayLogName
+     *
+     * @param string $relayLogName
+     *
+     * @return SlaveRelayLogInfo
+     */
+    public function setRelayLogName($relayLogName)
+    {
+        $this->relayLogName = $relayLogName;
+
+        return $this;
+    }
+
+    /**
+     * Get relayLogName
+     *
+     * @return string
+     */
+    public function getRelayLogName()
+    {
+        return $this->relayLogName;
+    }
+
+    /**
+     * Set relayLogPos
+     *
+     * @param integer $relayLogPos
+     *
+     * @return SlaveRelayLogInfo
+     */
+    public function setRelayLogPos($relayLogPos)
+    {
+        $this->relayLogPos = $relayLogPos;
+
+        return $this;
+    }
+
+    /**
+     * Get relayLogPos
+     *
+     * @return integer
+     */
+    public function getRelayLogPos()
+    {
+        return $this->relayLogPos;
+    }
+
+    /**
+     * Set masterLogName
+     *
+     * @param string $masterLogName
+     *
+     * @return SlaveRelayLogInfo
+     */
+    public function setMasterLogName($masterLogName)
+    {
+        $this->masterLogName = $masterLogName;
+
+        return $this;
+    }
+
+    /**
+     * Get masterLogName
+     *
+     * @return string
+     */
+    public function getMasterLogName()
+    {
+        return $this->masterLogName;
+    }
+
+    /**
+     * Set masterLogPos
+     *
+     * @param integer $masterLogPos
+     *
+     * @return SlaveRelayLogInfo
+     */
+    public function setMasterLogPos($masterLogPos)
+    {
+        $this->masterLogPos = $masterLogPos;
+
+        return $this;
+    }
+
+    /**
+     * Get masterLogPos
+     *
+     * @return integer
+     */
+    public function getMasterLogPos()
+    {
+        return $this->masterLogPos;
+    }
+
+    /**
+     * Set sqlDelay
+     *
+     * @param integer $sqlDelay
+     *
+     * @return SlaveRelayLogInfo
+     */
+    public function setSqlDelay($sqlDelay)
+    {
+        $this->sqlDelay = $sqlDelay;
+
+        return $this;
+    }
+
+    /**
+     * Get sqlDelay
+     *
+     * @return integer
+     */
+    public function getSqlDelay()
+    {
+        return $this->sqlDelay;
+    }
+
+    /**
+     * Set numberOfWorkers
+     *
+     * @param integer $numberOfWorkers
+     *
+     * @return SlaveRelayLogInfo
+     */
+    public function setNumberOfWorkers($numberOfWorkers)
+    {
+        $this->numberOfWorkers = $numberOfWorkers;
+
+        return $this;
+    }
+
+    /**
+     * Get numberOfWorkers
+     *
+     * @return integer
+     */
+    public function getNumberOfWorkers()
+    {
+        return $this->numberOfWorkers;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

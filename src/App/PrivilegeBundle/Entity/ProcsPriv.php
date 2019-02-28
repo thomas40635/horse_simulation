@@ -79,5 +79,196 @@ class ProcsPriv
     private $timestamp = 'CURRENT_TIMESTAMP';
 
 
-}
 
+    /**
+     * Set host
+     *
+     * @param string $host
+     *
+     * @return ProcsPriv
+     */
+    public function setHost($host)
+    {
+        $this->host = $host;
+
+        return $this;
+    }
+
+    /**
+     * Get host
+     *
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * Set db
+     *
+     * @param string $db
+     *
+     * @return ProcsPriv
+     */
+    public function setDb($db)
+    {
+        $this->db = $db;
+
+        return $this;
+    }
+
+    /**
+     * Get db
+     *
+     * @return string
+     */
+    public function getDb()
+    {
+        return $this->db;
+    }
+
+    /**
+     * Set user
+     *
+     * @param string $user
+     *
+     * @return ProcsPriv
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return string
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set routineName
+     *
+     * @param string $routineName
+     *
+     * @return ProcsPriv
+     */
+    public function setRoutineName($routineName)
+    {
+        $this->routineName = $routineName;
+
+        return $this;
+    }
+
+    /**
+     * Get routineName
+     *
+     * @return string
+     */
+    public function getRoutineName()
+    {
+        return $this->routineName;
+    }
+
+    /**
+     * Set routineType
+     *
+     * @param string $routineType
+     *
+     * @return ProcsPriv
+     */
+    public function setRoutineType($routineType)
+    {
+        $this->routineType = $routineType;
+
+        return $this;
+    }
+
+    /**
+     * Get routineType
+     *
+     * @return string
+     */
+    public function getRoutineType()
+    {
+        return $this->routineType;
+    }
+
+    /**
+     * Set grantor
+     *
+     * @param string $grantor
+     *
+     * @return ProcsPriv
+     */
+    public function setGrantor($grantor)
+    {
+        $this->grantor = $grantor;
+
+        return $this;
+    }
+
+    /**
+     * Get grantor
+     *
+     * @return string
+     */
+    public function getGrantor()
+    {
+        return $this->grantor;
+    }
+
+    /**
+     * Set procPriv
+     *
+     * @param array $procPriv
+     *
+     * @return ProcsPriv
+     */
+    public function setProcPriv($procPriv)
+    {
+        $this->procPriv = $procPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get procPriv
+     *
+     * @return array
+     */
+    public function getProcPriv()
+    {
+        return $this->procPriv;
+    }
+
+    /**
+     * Set timestamp
+     *
+     * @param \DateTime $timestamp
+     *
+     * @return ProcsPriv
+     */
+    public function setTimestamp($timestamp)
+    {
+        $this->timestamp = $timestamp;
+
+        return $this;
+    }
+
+    /**
+     * Get timestamp
+     *
+     * @return \DateTime
+     */
+    public function getTimestamp()
+    {
+        return $this->timestamp;
+    }
+}

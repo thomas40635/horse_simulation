@@ -29,5 +29,38 @@ class HelpKeyword
     private $name;
 
 
-}
 
+    /**
+     * Get helpKeywordId
+     *
+     * @return integer
+     */
+    public function getHelpKeywordId()
+    {
+        return $this->helpKeywordId;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return HelpKeyword
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+}

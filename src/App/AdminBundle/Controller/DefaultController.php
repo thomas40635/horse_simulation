@@ -16,7 +16,18 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+
         return $this->render('@AppAdmin/Default/index.html.twig');
+    }
+
+    /**
+     * @Route("phpmyadmin", name="redirectPhpMyAdmin")
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function redirectPhpMyAdminAction()
+    {
+        $localhost_address = "http://".$_SERVER['SERVER_NAME']."/phpmyadmin";
+        return $this->redirect($localhost_address);
     }
 
     /**
@@ -27,6 +38,9 @@ class DefaultController extends Controller
     public function StartServerAction()
     {
         $messages = shell_exec("/etc/rc.d/init.d/mysql start");
+        if($messages == null){
+            $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";
+        }
         return $this->redirectToRoute('server', array(
             'messages' => $messages
         ));
@@ -40,6 +54,9 @@ class DefaultController extends Controller
     public function StopServerAction()
     {
         $messages = shell_exec("/etc/rc.d/init.d/mysql stop");
+        if($messages == null){
+            $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";
+        }
         return $this->redirectToRoute('server', array(
             'messages' => $messages
         ));
@@ -53,6 +70,9 @@ class DefaultController extends Controller
     public function ReloadServerAction()
     {
         $messages = shell_exec("/etc/rc.d/init.d/mysql reload");
+        if($messages == null){
+            $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";
+        }
         return $this->redirectToRoute('server', array(
             'messages' => $messages
         ));
@@ -67,6 +87,7 @@ class DefaultController extends Controller
     {
         $messages = shell_exec("mysql -u root -proot
 SHOW PROCESSLIST;
+
 ");
         if($messages == null){
             $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";

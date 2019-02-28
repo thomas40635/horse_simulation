@@ -38,5 +38,76 @@ class TableStats
     private $cardinality;
 
 
-}
 
+    /**
+     * Set dbName
+     *
+     * @param string $dbName
+     *
+     * @return TableStats
+     */
+    public function setDbName($dbName)
+    {
+        $this->dbName = $dbName;
+
+        return $this;
+    }
+
+    /**
+     * Get dbName
+     *
+     * @return string
+     */
+    public function getDbName()
+    {
+        return $this->dbName;
+    }
+
+    /**
+     * Set tableName
+     *
+     * @param string $tableName
+     *
+     * @return TableStats
+     */
+    public function setTableName($tableName)
+    {
+        $this->tableName = $tableName;
+
+        return $this;
+    }
+
+    /**
+     * Get tableName
+     *
+     * @return string
+     */
+    public function getTableName()
+    {
+        return $this->tableName;
+    }
+
+    /**
+     * Set cardinality
+     *
+     * @param integer $cardinality
+     *
+     * @return TableStats
+     */
+    public function setCardinality($cardinality)
+    {
+        $this->cardinality = $cardinality;
+
+        return $this;
+    }
+
+    /**
+     * Get cardinality
+     *
+     * @return integer
+     */
+    public function getCardinality()
+    {
+        return $this->cardinality;
+    }
+}

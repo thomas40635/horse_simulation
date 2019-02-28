@@ -43,5 +43,86 @@ class HelpCategory
     private $url;
 
 
-}
 
+    /**
+     * Get helpCategoryId
+     *
+     * @return integer
+     */
+    public function getHelpCategoryId()
+    {
+        return $this->helpCategoryId;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return HelpCategory
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set parentCategoryId
+     *
+     * @param integer $parentCategoryId
+     *
+     * @return HelpCategory
+     */
+    public function setParentCategoryId($parentCategoryId)
+    {
+        $this->parentCategoryId = $parentCategoryId;
+
+        return $this;
+    }
+
+    /**
+     * Get parentCategoryId
+     *
+     * @return integer
+     */
+    public function getParentCategoryId()
+    {
+        return $this->parentCategoryId;
+    }
+
+    /**
+     * Set url
+     *
+     * @param string $url
+     *
+     * @return HelpCategory
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+}
