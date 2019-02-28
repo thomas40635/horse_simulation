@@ -10,15 +10,22 @@ security:
         ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN]
 
     providers:
-#        in_memory:
-#            memory:
-#                users:
-#                    user:  { password: userpass, roles: [ 'ROLE_USER' ] }
-#                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
-        main:
-            entity:
-                class:    App\PrivilegeBundle\Entity\User
-                property : username
+        in_memory:
+            memory:
+                users:
+                    admin: { password: adminpw, roles: ['ROLE_ADMIN'] }
+                    useroptimisation: { password: useroptimisationpw, roles: ['ROLE_ADMIN'] }
+                    automate: { password: automatepw, roles: ['ROLE_ADMIN'] }
+                    dev: { password: devpw, roles: ['ROLE_ADMIN'] }
+                    moderator: { password: moderatorpw, roles: ['ROLE_ADMIN'] }
+                    specialist: { password: specialistpw, roles: ['ROLE_ADMIN'] }
+                    adminshow: { password: adminshowpw, roles: ['ROLE_ADMIN'] }
+                    editor: { password: editorpw, roles: ['ROLE_ADMIN'] }
+                    client: { password: clientpw, roles: ['ROLE_ADMIN'] }
+#        main:
+#            entity:
+#                class:    App\PrivilegeBundle\Entity\User
+#                property : username
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -29,7 +36,7 @@ security:
         main:
             pattern: ^/
             anonymous: true
-            provider: main
+            provider: in_memory
             form_login:
                 login_path: login
                 check_path: login_check
