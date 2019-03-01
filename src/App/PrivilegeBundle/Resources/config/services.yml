@@ -9,27 +9,27 @@ services:
     autowire: true
     tags: ['controller.service_arguments']
 
-
-  admin.privilege.user:
-    public: true
-    class: App\PrivilegeBundle\Admin\UserAdmin
-    arguments: [~ , App\PrivilegeBundle\Entity\User, ~]
-    tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Mysql users', label: 'UserPrivilege', show_mosaic_button: false }
-
-  admin.privilege.db:
-    public: true
-    class: App\PrivilegeBundle\Admin\DbAdmin
-    arguments: [~ , App\PrivilegeBundle\Entity\Db, ~]
-    tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Mysql users', label: 'Db', show_mosaic_button: false }
-
-  admin.privilege.tables.priv:
-    public: true
-    class: App\PrivilegeBundle\Admin\TablesPrivAdmin
-    arguments: [~ , App\PrivilegeBundle\Entity\TablesPriv, ~]
-    tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Mysql users', label: 'TablesPriv', show_mosaic_button: false }
+#
+#  admin.privilege.user:
+#    public: true
+#    class: App\PrivilegeBundle\Admin\UserAdmin
+#    arguments: [~ , App\PrivilegeBundle\Entity\User, ~]
+#    tags:
+#      - { name: 'sonata.admin', manager_type: 'orm', group: 'Mysql users', label: 'UserPrivilege', show_mosaic_button: false }
+#
+#  admin.privilege.db:
+#    public: true
+#    class: App\PrivilegeBundle\Admin\DbAdmin
+#    arguments: [~ , App\PrivilegeBundle\Entity\Db, ~]
+#    tags:
+#      - { name: 'sonata.admin', manager_type: 'orm', group: 'Mysql users', label: 'Db', show_mosaic_button: false }
+#
+#  admin.privilege.tables.priv:
+#    public: true
+#    class: App\PrivilegeBundle\Admin\TablesPrivAdmin
+#    arguments: [~ , App\PrivilegeBundle\Entity\TablesPriv, ~]
+#    tags:
+#      - { name: 'sonata.admin', manager_type: 'orm', group: 'Mysql users', label: 'TablesPriv', show_mosaic_button: false }
 
   admin.privilege.innodb.index.stats:
     public: true

@@ -39,7 +39,7 @@ class DefaultController extends Controller
     {
         $messages = shell_exec("/etc/rc.d/init.d/mysql start");
         if($messages == null){
-            $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";
+            $messages = "La commande ne fonctionne pas.";
         }
         return $this->redirectToRoute('server', array(
             'messages' => $messages
@@ -55,7 +55,7 @@ class DefaultController extends Controller
     {
         $messages = shell_exec("/etc/rc.d/init.d/mysql stop");
         if($messages == null){
-            $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";
+            $messages = "La commande ne fonctionne pas.";
         }
         return $this->redirectToRoute('server', array(
             'messages' => $messages
@@ -71,7 +71,7 @@ class DefaultController extends Controller
     {
         $messages = shell_exec("/etc/rc.d/init.d/mysql reload");
         if($messages == null){
-            $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";
+            $messages = "La commande ne fonctionne pas.";
         }
         return $this->redirectToRoute('server', array(
             'messages' => $messages
@@ -90,7 +90,7 @@ SHOW PROCESSLIST;
 
 ");
         if($messages == null){
-            $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";
+            $messages = "La commande ne fonctionne pas.";
         }
         return $this->render('@AppAdmin/Default/showprocess.html.twig', array(
             'list' => $messages
@@ -108,7 +108,7 @@ SHOW PROCESSLIST;
     {
         $messages = shell_exec("mysql -u root -p;KILL".$request->get('process'));
         if($messages == null){
-            $messages = "La commande ne fonctionne pas. Essayez sur un serveur LINUX.";
+            $messages = "La commande ne fonctionne pas.";
         }
         return $this->render('@AppAdmin/Default/killprocess.html.twig', array(
             'message' => $messages

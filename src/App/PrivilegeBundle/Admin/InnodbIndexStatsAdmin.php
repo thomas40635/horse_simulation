@@ -1,7 +1,6 @@
 <?php
 namespace App\PrivilegeBundle\Admin;
 
-use Admin\CustomAdmin;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -16,9 +15,16 @@ final class InnodbIndexStatsAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
+        $date = new \DateTime('NOW');
         $formMapper
-            ->add('databaseName', TextType::class)
+            ->add('databaseName', TextType::class, array('data' => 'horse_simulation', 'disabled' => 'disabled'))
+            ->add('tableName', TextType::class)
             ->add('indexName', TextType::class)
+            ->add('statName', TextType::class)
+            ->add('lastUpdate', DateTimeType::class, array('data' => $date, 'disabled' => 'disabled'))
+            ->add('statValue', IntegerType::class)
+            ->add('sampleSize', IntegerType::class)
+            ->add('statDescription', TextType::class)
         ;
     }
 
@@ -27,6 +33,12 @@ final class InnodbIndexStatsAdmin extends AbstractAdmin
         $datagridMapper
             ->add('databaseName')
             ->add('indexName')
+            ->add('tableName')
+            ->add('statName')
+            ->add('lastUpdate')
+            ->add('statValue')
+            ->add('sampleSize')
+            ->add('statDescription')
             ;
     }
 
@@ -35,6 +47,12 @@ final class InnodbIndexStatsAdmin extends AbstractAdmin
         $listMapper
             ->addIdentifier('databaseName')
             ->addIdentifier('indexName')
+            ->addIdentifier('tableName')
+            ->addIdentifier('statName')
+            ->addIdentifier('lastUpdate')
+            ->addIdentifier('statValue')
+            ->addIdentifier('sampleSize')
+            ->addIdentifier('statDescription')
         ;
     }
 
@@ -51,4 +69,11 @@ final class InnodbIndexStatsAdmin extends AbstractAdmin
 
         return $query;
     }
+
+   public function prePersist($object)
+   {
+       $object->setDatabaseName('horse_simulation');
+       $date = new \DateTime('NOW');
+       $object->setLastUpdate($date);
+   }
 }

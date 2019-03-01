@@ -53,7 +53,7 @@ class InnodbIndexStats
      *
      * @ORM\Column(name="last_update", type="datetime", nullable=false)
      */
-    private $lastUpdate = 'CURRENT_TIMESTAMP';
+    private $lastUpdate;
 
     /**
      * @var integer
