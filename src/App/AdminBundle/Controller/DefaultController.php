@@ -2,6 +2,7 @@
 
 namespace App\AdminBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,6 +12,7 @@ class DefaultController extends Controller
     /**
      * Matches /
      *
+     * @Security("has_role('ROLE_ADMIN')")
      * @Route("/", name="index")
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -21,6 +23,7 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Security("has_role('ROLE_ADMIN')")
      * @Route("phpmyadmin", name="redirectPhpMyAdmin")
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
@@ -32,7 +35,7 @@ class DefaultController extends Controller
 
     /**
      * Matches /start
-     *
+     * @Security("has_role('ROLE_ADMIN')")
      * @Route("/start", name="start")
      */
     public function StartServerAction()
@@ -48,7 +51,7 @@ class DefaultController extends Controller
 
     /**
      * Matches /stop
-     *
+     * @Security("has_role('ROLE_ADMIN')")
      * @Route("/stop", name="stop")
      */
     public function StopServerAction()
@@ -64,7 +67,7 @@ class DefaultController extends Controller
 
     /**
      * Matches /reload
-     *
+     * @Security("has_role('ROLE_ADMIN')")
      * @Route("/reload", name="reload")
      */
     public function ReloadServerAction()
@@ -80,7 +83,7 @@ class DefaultController extends Controller
 
     /**
      * Matches /showprocess
-     *
+     * @Security("has_role('ROLE_ADMIN')")
      * @Route("/showprocess", name="showprocess")
      */
     public function ShowProcessAction()
@@ -99,7 +102,7 @@ SHOW PROCESSLIST;
 
     /**
      * Matches /killprocess
-     *
+     * @Security("has_role('ROLE_ADMIN')")
      * @Route("/killprocess", name="killprocess")
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
@@ -117,7 +120,7 @@ SHOW PROCESSLIST;
 
     /**
      * Matches /server
-     *
+     * @Security("has_role('ROLE_ADMIN')")
      * @Route("/server", name="server")
      */
     public function ServerAction(Request $request)
