@@ -13,6 +13,7 @@ html {
     --main-color: #002451;
     --secondary-color: #a9b4bf;
     --link-color: #008dff;
+    --alert-color: #ff265e;
     --par-color: #28242d;
     --background-color: #ffffff;
     --light-color: #f1f8ff;
@@ -102,7 +103,7 @@ form label {
     z-index: 1;
 }
 
-form input[type=text], form input[type=number] {
+form input[type=text], form input[type=number], form input[type=password] {
     margin-top: -8px;
     position: relative;
     z-index: 0;
@@ -114,7 +115,7 @@ form input[type=text], form input[type=number] {
     text-align: center;
 }
 
-form input[type=text]::placeholder, form input[type=number]::placeholder {
+form input[type=text]::placeholder, form input[type=password]::placeholder, form input[type=number]::placeholder {
     color: var(--secondary-color);
 }
 
@@ -126,13 +127,25 @@ form input[type=submit] {
     padding: 10px;
 }
 
-.back-button{
+.topleft-button{
     position: absolute;
     left: 40px;
-    top: 50px;
+    top: 40px;
     border: none;
     background: transparent;
     cursor: pointer;
     color: var(--secondary-color);
     outline: none;
+    font-size: var(--secondary-font-size);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.topleft-button.logout{
+    background: var(--alert-color);
+    color: #fff;
+}
+
+.input-space{
+    height: 5px;
 }
