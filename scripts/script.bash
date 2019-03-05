@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tables=$(ls /var/lib/mysql/horse_simulation/ | grep *.MYI)
+tables=$(ls /var/lib/mysql/horse_simulation/ | grep .MYI)
 if  [ ! -z "$tables" ]
     then
 		# Vérifier les tables
