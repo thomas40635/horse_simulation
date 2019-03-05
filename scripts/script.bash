@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tables=${cat /var/lib/mysql/horse_simulation/ | grep *.MYI}
+table=$(cat /var/lib/mysql/horse_simulation/ | grep *.MYI)
 if  [ ! -z "$tables" ]
     then
 		# Vérifier les tables
@@ -23,7 +23,3 @@ if  [ ! -z "$tables" ]
     else
 		echo "Il n'y a pas de fichier myisam dans la base."
 fi
-
-
-
-
