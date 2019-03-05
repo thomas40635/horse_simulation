@@ -130,4 +130,47 @@ SHOW PROCESSLIST;
             'messages' => $messages
         ));
     }
+
+    /**
+     * Matches /statistic
+     * @Security("has_role('ROLE_ADMIN')")
+     * @Route("/statistic", name="statistic")
+     */
+    public function StatisticAction()
+    {
+        $messages = shell_exec("/www/horse_simulation/scripts/surveillance-statistique");
+        if($messages == null){
+            $messages = "La commande ne fonctionne pas.";
+        }
+        return $this->render('@AppAdmin/Default/showprocess.html.twig', array(
+            'list' => $messages
+        ));
+    }
+
+    /**
+     * Matches /diagnostic
+     * @Security("has_role('ROLE_ADMIN')")
+     * @Route("/diagnostic", name="diagnostic")
+     */
+    public function DiagnosticAction()
+    {
+        $messages = shell_exec("/www/horse_simulation/scripts/surveillance-diagnostic");
+        if($messages == null){
+            $messages = "La commande ne fonctionne pas.";
+        }
+        return $this->render('@AppAdmin/Default/showprocess.html.twig', array(
+            'list' => $messages
+        ));
+    }
+
+    /**
+     * Matches /surveillance
+     * @Security("has_role('ROLE_ADMIN')")
+     * @Route("/surveillance", name="surveillance")
+     */
+    public function SurveillanceAction()
+    {
+        return $this->render('@AppAdmin/Default/surveillance.html.twig');
+    }
+
 }

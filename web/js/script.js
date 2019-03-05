@@ -29,5 +29,36 @@ $(document).ready(function () {
                 killprocess.after(div);
             }
         });
-    })
+    });
+
+
+    var statistic = $('#statistic');
+    statistic.on('click', function(event){
+        event.preventDefault();
+        $.ajax({
+            url: "/statistic",
+            success: function (response) {
+                var div = document.createElement('div');
+                $(div).addClass('message error');
+
+                div.append(response);
+                statistic.after(div);
+            }
+        });
+    });
+
+    var diagnostic = $('#diagnostic');
+    diagnostic.on('click', function(event){
+        event.preventDefault();
+        $.ajax({
+            url: "/diagnostic",
+            success: function (response) {
+                var div = document.createElement('div');
+                $(div).addClass('message error');
+
+                div.append(response);
+                diagnostic.after(div);
+            }
+        });
+    });
 });
