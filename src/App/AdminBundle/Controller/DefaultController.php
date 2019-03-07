@@ -40,7 +40,7 @@ class DefaultController extends Controller
      */
     public function StartServerAction()
     {
-        $messages = shell_exec("/etc/rc.d/init.d/mysql start");
+        $messages = shell_exec("/www/horse_simulation/scripts/start-server.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -56,7 +56,7 @@ class DefaultController extends Controller
      */
     public function StopServerAction()
     {
-        $messages = shell_exec("/etc/rc.d/init.d/mysql stop");
+        $messages = shell_exec("/www/horse_simulation/scripts/stop-server.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -72,7 +72,7 @@ class DefaultController extends Controller
      */
     public function ReloadServerAction()
     {
-        $messages = shell_exec("/etc/rc.d/init.d/mysql reload");
+        $messages = shell_exec("/www/horse_simulation/scripts/reload-server.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -88,10 +88,7 @@ class DefaultController extends Controller
      */
     public function ShowProcessAction()
     {
-        $messages = shell_exec("mysql -u root -proot
-SHOW PROCESSLIST;
-
-");
+        $messages = shell_exec("/www/horse_simulation/scripts/show-process.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -109,7 +106,7 @@ SHOW PROCESSLIST;
      */
     public function KillProcessAction(Request $request)
     {
-        $messages = shell_exec("mysql -u root -p;KILL".$request->get('process'));
+        $messages = shell_exec("/www/horse_simulation/scripts/show-process.bash ".$request->get('process'));
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -122,6 +119,8 @@ SHOW PROCESSLIST;
      * Matches /server
      * @Security("has_role('ROLE_ADMIN')")
      * @Route("/server", name="server")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function ServerAction(Request $request)
     {

@@ -23,3 +23,5 @@ if  [ ! -z "$tables" ]
     else
 		echo "Il n'y a pas de fichier myisam dans la base."
 fi
+
+$(mysqladmin -u automate -pautomatepw flush-tables)
