@@ -137,7 +137,7 @@ class DefaultController extends Controller
      */
     public function StatisticAction()
     {
-        $messages = shell_exec("/www/horse_simulation/scripts/surveillance-statistique");
+        $messages = shell_exec("/www/horse_simulation/scripts/surveillance-statistique.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -153,7 +153,7 @@ class DefaultController extends Controller
      */
     public function DiagnosticAction()
     {
-        $messages = shell_exec("/www/horse_simulation/scripts/surveillance-diagnostic");
+        $messages = shell_exec("/www/horse_simulation/scripts/surveillance-diagnostic.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
