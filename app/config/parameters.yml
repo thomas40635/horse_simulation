@@ -1,6 +1,5 @@
 # This file is auto-generated during the composer install
 parameters:
-    # First Database
     database_host: 127.0.0.1
     database_port: null
     database_name: mysql
@@ -11,8 +10,6 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: ThisTokenIsNotSoSecretChangeIt
-
-    # Second Database
     database_host2: 127.0.0.1
     database_port2: null
     database_name2: horse_simulation
