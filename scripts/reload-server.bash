@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "\nRELOAD : \n"
-mysqladmin -u root -proot status
+mysqladmin -u automate -pautomate reload

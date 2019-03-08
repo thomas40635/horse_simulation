@@ -20,8 +20,9 @@ if  [ ! -z "$tables" ]
 		# -e vérifie de manière plus approfondie
 		DefragTables=$(myisamchk -e -r /var/lib/mysql/horse_simulation/*.MYI)
 		echo $DefragTables
+
+        #On recharge les tables
+        $(mysqladmin -u automate -pautomatepw flush-tables)
     else
 		echo "Il n'y a pas de fichier myisam dans la base."
 fi
-
-$(mysqladmin -u automate -pautomatepw flush-tables)

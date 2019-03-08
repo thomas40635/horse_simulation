@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "\nSTATUS : \n"
+echo "<br>STATUS : <br>"
 mysqladmin -u root -proot status
