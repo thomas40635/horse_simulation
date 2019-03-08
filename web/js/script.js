@@ -6,7 +6,7 @@ $(document).ready(function () {
             url: "/showprocess",
             success: function (response) {
                 var div = document.createElement('div');
-                $(div).addClass('message error');
+                $(div).addClass('message');
 
                 div.append(response);
                 showprocess.after(div);
@@ -23,7 +23,7 @@ $(document).ready(function () {
             data: data,
             success: function (response) {
                 var div = document.createElement('div');
-                $(div).addClass('message error');
+                $(div).addClass('message');
 
                 div.append(response);
                 killprocess.after(div);
@@ -36,13 +36,18 @@ $(document).ready(function () {
     statistic.on('click', function(event){
         event.preventDefault();
         $.ajax({
-            url: "/statistic",
+            url: "/horse_simulation/web/statistic",
             success: function (response) {
                 var div = document.createElement('div');
-                $(div).addClass('message error');
-
+                $(div).addClass('message');
                 div.append(response);
-                statistic.after(div);
+                console.log(statistic.nextElementSibling.className);
+                if(statistic.nextElementSibling){
+                    statistic.nextElementSibling.append(div);
+                }else{
+                    statistic.after(div);
+                }
+
             }
         });
     });
@@ -54,7 +59,7 @@ $(document).ready(function () {
             url: "/diagnostic",
             success: function (response) {
                 var div = document.createElement('div');
-                $(div).addClass('message error');
+                $(div).addClass('message');
 
                 div.append(response);
                 diagnostic.after(div);

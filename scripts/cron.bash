@@ -1,25 +1,28 @@
 #!/bin/bash
 
 tables=$(ls /var/lib/mysql/horse_simulation/ | grep .MYI)
-if  [ ! -z "$tables" ]
+date=$(date +%D)
+$(echo "$date" >> log-optimisation.log)
+if  [[ ! -z "$tables" ]]
     then
 		# Vérifier les tables
 		# -d donne les informations sur la table
 		# -c vérifie si la table n'est pas corrompue
         verifTbales=$(myisamchk -d -c /var/lib/mysql/horse_simulation/*.MYI)
-        echo $verifTbales
+        $(echo "$verifTbales" >> log-optimisation.log)
+
 
 		# Optimiser les tables
-		# -a optimise les tables
+		# -a optimise les tablesà
 		# -s trie l'arbre des index
 		optimiseTables=$(myisamchk -a -s /var/lib/mysql/horse_simulation/*.MYI)
-		echo $optimiseTables
+		$(echo "$optimiseTables" >> log-optimisation.log)
 
 		# Défragmenter les tables
 		# -r répare et défragmente les tables
 		# -e vérifie de manière plus approfondie
-		DefragTables=$(myisamchk -e -r /var/lib/mysql/horse_simulation/*.MYI)
-		echo $DefragTables
+		defragTables=$(myisamchk -e -r /var/lib/mysql/horse_simulation/*.MYI)
+		$(echo "$defragTables" >> log-optimisation.log)
 
         #On recharge les tables
         $(mysqladmin -u automate -pautomatepw flush-tables)
