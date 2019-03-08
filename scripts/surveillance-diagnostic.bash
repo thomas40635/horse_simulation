@@ -7,7 +7,3 @@ echo "
 VARIABLES
 "
 mysqladmin -u root -proot variables
-
-echo "
-VARIABLES
-"
