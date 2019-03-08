@@ -31,5 +31,52 @@ class HelpRelation
     private $helpTopicId;
 
 
-}
 
+    /**
+     * Set helpKeywordId
+     *
+     * @param integer $helpKeywordId
+     *
+     * @return HelpRelation
+     */
+    public function setHelpKeywordId($helpKeywordId)
+    {
+        $this->helpKeywordId = $helpKeywordId;
+
+        return $this;
+    }
+
+    /**
+     * Get helpKeywordId
+     *
+     * @return integer
+     */
+    public function getHelpKeywordId()
+    {
+        return $this->helpKeywordId;
+    }
+
+    /**
+     * Set helpTopicId
+     *
+     * @param integer $helpTopicId
+     *
+     * @return HelpRelation
+     */
+    public function setHelpTopicId($helpTopicId)
+    {
+        $this->helpTopicId = $helpTopicId;
+
+        return $this;
+    }
+
+    /**
+     * Get helpTopicId
+     *
+     * @return integer
+     */
+    public function getHelpTopicId()
+    {
+        return $this->helpTopicId;
+    }
+}

@@ -77,5 +77,196 @@ class TablesPriv
     private $columnPriv = '';
 
 
-}
 
+    /**
+     * Set host
+     *
+     * @param string $host
+     *
+     * @return TablesPriv
+     */
+    public function setHost($host)
+    {
+        $this->host = $host;
+
+        return $this;
+    }
+
+    /**
+     * Get host
+     *
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * Set db
+     *
+     * @param string $db
+     *
+     * @return TablesPriv
+     */
+    public function setDb($db)
+    {
+        $this->db = $db;
+
+        return $this;
+    }
+
+    /**
+     * Get db
+     *
+     * @return string
+     */
+    public function getDb()
+    {
+        return $this->db;
+    }
+
+    /**
+     * Set user
+     *
+     * @param string $user
+     *
+     * @return TablesPriv
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return string
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set tableName
+     *
+     * @param string $tableName
+     *
+     * @return TablesPriv
+     */
+    public function setTableName($tableName)
+    {
+        $this->tableName = $tableName;
+
+        return $this;
+    }
+
+    /**
+     * Get tableName
+     *
+     * @return string
+     */
+    public function getTableName()
+    {
+        return $this->tableName;
+    }
+
+    /**
+     * Set grantor
+     *
+     * @param string $grantor
+     *
+     * @return TablesPriv
+     */
+    public function setGrantor($grantor)
+    {
+        $this->grantor = $grantor;
+
+        return $this;
+    }
+
+    /**
+     * Get grantor
+     *
+     * @return string
+     */
+    public function getGrantor()
+    {
+        return $this->grantor;
+    }
+
+    /**
+     * Set timestamp
+     *
+     * @param \DateTime $timestamp
+     *
+     * @return TablesPriv
+     */
+    public function setTimestamp($timestamp)
+    {
+        $this->timestamp = $timestamp;
+
+        return $this;
+    }
+
+    /**
+     * Get timestamp
+     *
+     * @return \DateTime
+     */
+    public function getTimestamp()
+    {
+        return $this->timestamp;
+    }
+
+    /**
+     * Set tablePriv
+     *
+     * @param array $tablePriv
+     *
+     * @return TablesPriv
+     */
+    public function setTablePriv($tablePriv)
+    {
+        $this->tablePriv = $tablePriv;
+
+        return $this;
+    }
+
+    /**
+     * Get tablePriv
+     *
+     * @return array
+     */
+    public function getTablePriv()
+    {
+        return $this->tablePriv;
+    }
+
+    /**
+     * Set columnPriv
+     *
+     * @param array $columnPriv
+     *
+     * @return TablesPriv
+     */
+    public function setColumnPriv($columnPriv)
+    {
+        $this->columnPriv = $columnPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get columnPriv
+     *
+     * @return array
+     */
+    public function getColumnPriv()
+    {
+        return $this->columnPriv;
+    }
+}

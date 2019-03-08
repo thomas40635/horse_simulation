@@ -1,35 +1,34 @@
 {% extends '@AppAdmin/base.html.twig' %}
 {% block body %}
-Actions sur le serveur
-<br>
-Voulez-vous : <br>
-{% if messages is not null %}
-    {{ messages }}
-{% endif %}
-<ul>
-    <li>
-        <a href="{{ path('start') }}">Démarrer le server mysql</a>
-    </li>
-    <li>
-        <a href="{{ path('stop') }}">Arrêter le server mysql</a>
-    </li>
-    <li>
-        <a href="{{ path('reload') }}">Recharger le server mysql</a>
-    </li>
-</ul>
-<ul>
-    <li>
-        <a id="show-process" href="{{ path('showprocess') }}">Voir la liste des processus utilisateurs</a>
-    <li>
-        KILL un process
-        <form method="POST" action="{{ path('killprocess') }}">
-            <label for="process">Entrer le numéro du process à tuer : </label>
-            <input id="process" type="number" name="process">
-            <input id="kill-process" type="submit">
-        </form>
-    </li>
-</ul>
-<a href="{{ path('index') }}">Retour</a>
+    <p>Actions sur le serveur</p>
+    {% if messages is not null %}
+        {{ messages }}
+    {% endif %}
+    <ul>
+        <li>
+            <a href="{{ path('start') }}">Démarrer le server mysql</a>
+        </li>
+        <li>
+            <a href="{{ path('stop') }}">Arrêter le server mysql</a>
+        </li>
+        <li>
+            <a href="{{ path('reload') }}">Recharger le server mysql</a>
+        </li>
+
+    </ul>
+    <ul>
+        <li>
+            <a id="show-process" href="{{ path('showprocess') }}">Voir la liste des processus utilisateurs</a>
+        </li>
+    </ul>
+    <form method="POST" action="{{ path('killprocess') }}">
+        <label for="process">Processus à tuer</label>
+        <input id="process" type="number" name="process" placeholder="Numéro">
+        <input id="kill-process" type="submit">
+    </form>
+    <a href="{{ path('index') }}">
+        <button class="topleft-button">Retour</button>
+    </a>
 {% endblock %}
 
 

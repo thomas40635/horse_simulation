@@ -1,14 +1,21 @@
 {% extends '@AppAdmin/base.html.twig' %}
 {% block body %}
-Bienvenue sur le tableau de bord.
-<br>
-Voulez-vous : <br>
-<ul>
-    <li>
-        <a href="{{ path('sonata_admin_dashboard') }}">Aller sur le menu d'admin</a>
-    </li>
-    <li>
-        <a href="{{ path('server') }}">Effectuer des actions sur le serveur</a>
-    </li>
-</ul>
+    <p class="normal">Bienvenue sur le tableau de bord.</p>
+    <ul>
+        <li>
+            <a href="{{ path('sonata_admin_dashboard') }}">Aller sur le menu d'admin</a>
+        </li>
+        <li>
+            <a href="{{ path('server') }}">Effectuer des actions sur le serveur mysql</a>
+        </li>
+        <li>
+            <a href="{{ path('surveillance') }}">Politique de surveillance</a>
+        </li>
+        <li>
+            <a href="{{ path('redirectPhpMyAdmin') }}">Lien vers PHPMyAdmin (droits administrateurs)</a>
+        </li>
+    </ul>
+    <a href="{{ path('logout') }}">
+        <button class="topleft-button logout">Déconnexion</button>
+    </a>
 {% endblock %}

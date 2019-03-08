@@ -8,14 +8,14 @@ services:
     class: App\Admin\UserAdmin
     arguments: [~ , App\AdminBundle\Entity\User, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'User' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'User', show_mosaic_button: false }
 
   admin.disease:
     public: true
     class: App\Admin\DiseaseAdmin
     arguments: [~ , App\AdminBundle\Entity\Disease, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Disease' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Disease', show_mosaic_button: false }
 
 
   admin.riding.school:
@@ -23,137 +23,137 @@ services:
     class: App\Admin\RidingSchoolAdmin
     arguments: [~ , App\AdminBundle\Entity\RidingSchool, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'RidingSchool' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'RidingSchool', show_mosaic_button: false }
 
   admin.transaction:
     public: true
     class: App\Admin\TransactionAdmin
     arguments: [~ , App\AdminBundle\Entity\Transaction, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Transaction' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Transaction', show_mosaic_button: false }
 
   admin.club:
     public: true
     class: App\Admin\ClubAdmin
     arguments: [~ , App\AdminBundle\Entity\Club, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Club' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Club', show_mosaic_button: false }
 
   admin.breed:
     public: true
     class: App\Admin\BreedAdmin
     arguments: [~ , App\AdminBundle\Entity\Breed, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Breed' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Breed', show_mosaic_button: false }
 
   admin.circuit:
     public: true
     class: App\Admin\CircuitAdmin
     arguments: [~ , App\AdminBundle\Entity\Circuit, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Circuit' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Circuit', show_mosaic_button: false }
 
   admin.show:
     public: true
     class: App\Admin\RidingShowAdmin
     arguments: [~ , App\AdminBundle\Entity\RidingShow, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Show' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Show', show_mosaic_button: false }
 
   admin.horse:
     public: true
     class: App\Admin\HorseAdmin
     arguments: [~ , App\AdminBundle\Entity\Horse, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Horse' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Horse', show_mosaic_button: false }
 
   admin.infrastructure:
     public: true
     class: App\Admin\InfrastructureAdmin
     arguments: [~ , App\AdminBundle\Entity\Infrastructure, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Infrastructure' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Infrastructure', show_mosaic_button: false }
 
   admin.infratype:
     public: true
     class: App\Admin\InfraTypeAdmin
     arguments: [~ , App\AdminBundle\Entity\InfraType, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'InfraType' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'InfraType', show_mosaic_button: false }
 
   admin.wound:
     public: true
     class: App\Admin\WoundAdmin
     arguments: [~ , App\AdminBundle\Entity\Wound, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Wound' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Wound', show_mosaic_button: false }
 
   admin.parasite:
     public: true
     class: App\Admin\ParasiteAdmin
     arguments: [~ , App\AdminBundle\Entity\Parasite, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Parasite' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Parasite', show_mosaic_button: false }
 
   admin.item:
     public: true
     class: App\Admin\ItemAdmin
     arguments: [~ , App\AdminBundle\Entity\Item, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Item' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Item', show_mosaic_button: false }
 
   admin.item.category:
     public: true
     class: App\Admin\ItemCategoryAdmin
     arguments: [~ , App\AdminBundle\Entity\ItemCategory, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'ItemCategory' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'ItemCategory', show_mosaic_button: false }
 
   admin.item.news.horsesale:
     public: true
     class: App\Admin\ItemNewsHorsesaleAdmin
     arguments: [~ , App\AdminBundle\Entity\ItemNewsHorsesale, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'ItemNewsHorsesale' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'ItemNewsHorsesale', show_mosaic_button: false }
 
   admin.item.news.itemsale:
     public: true
     class: App\Admin\ItemNewsItemsaleAdmin
     arguments: [~ , App\AdminBundle\Entity\ItemNewsItemsale, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'ItemNewsItemsale' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'ItemNewsItemsale', show_mosaic_button: false }
 
   admin.item.news.show:
     public: true
     class: App\Admin\ItemNewsShowAdmin
     arguments: [~ , App\AdminBundle\Entity\ItemNewsShow, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'ItemNewsShow' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'ItemNewsShow', show_mosaic_button: false }
 
   admin.news:
     public: true
     class: App\Admin\NewsAdmin
     arguments: [~ , App\AdminBundle\Entity\News, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'News' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'News', show_mosaic_button: false }
 
   admin.quality:
     public: true
     class: App\Admin\QualityAdmin
     arguments: [~ , App\AdminBundle\Entity\Quality, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Quality' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Quality', show_mosaic_button: false }
 
   admin.reward:
     public: true
     class: App\Admin\RewardAdmin
     arguments: [~ , App\AdminBundle\Entity\Reward, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables', label: 'Reward' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation', label: 'Reward', show_mosaic_button: false }
 
   admin.task:
     public: true
     class: App\Admin\TaskAdmin
     arguments: [~ , App\AdminBundle\Entity\Task, ~]
     tags:
-      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables',  label: 'Task' }
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation',  label: 'Task', show_mosaic_button: false }

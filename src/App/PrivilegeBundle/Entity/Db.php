@@ -173,5 +173,532 @@ class Db
     private $triggerPriv = 'N';
 
 
-}
 
+    /**
+     * Set host
+     *
+     * @param string $host
+     *
+     * @return Db
+     */
+    public function setHost($host)
+    {
+        $this->host = $host;
+
+        return $this;
+    }
+
+    /**
+     * Get host
+     *
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * Set db
+     *
+     * @param string $db
+     *
+     * @return Db
+     */
+    public function setDb($db)
+    {
+        $this->db = $db;
+
+        return $this;
+    }
+
+    /**
+     * Get db
+     *
+     * @return string
+     */
+    public function getDb()
+    {
+        return $this->db;
+    }
+
+    /**
+     * Set user
+     *
+     * @param string $user
+     *
+     * @return Db
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return string
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set selectPriv
+     *
+     * @param string $selectPriv
+     *
+     * @return Db
+     */
+    public function setSelectPriv($selectPriv)
+    {
+        $this->selectPriv = $selectPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get selectPriv
+     *
+     * @return string
+     */
+    public function getSelectPriv()
+    {
+        return $this->selectPriv;
+    }
+
+    /**
+     * Set insertPriv
+     *
+     * @param string $insertPriv
+     *
+     * @return Db
+     */
+    public function setInsertPriv($insertPriv)
+    {
+        $this->insertPriv = $insertPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get insertPriv
+     *
+     * @return string
+     */
+    public function getInsertPriv()
+    {
+        return $this->insertPriv;
+    }
+
+    /**
+     * Set updatePriv
+     *
+     * @param string $updatePriv
+     *
+     * @return Db
+     */
+    public function setUpdatePriv($updatePriv)
+    {
+        $this->updatePriv = $updatePriv;
+
+        return $this;
+    }
+
+    /**
+     * Get updatePriv
+     *
+     * @return string
+     */
+    public function getUpdatePriv()
+    {
+        return $this->updatePriv;
+    }
+
+    /**
+     * Set deletePriv
+     *
+     * @param string $deletePriv
+     *
+     * @return Db
+     */
+    public function setDeletePriv($deletePriv)
+    {
+        $this->deletePriv = $deletePriv;
+
+        return $this;
+    }
+
+    /**
+     * Get deletePriv
+     *
+     * @return string
+     */
+    public function getDeletePriv()
+    {
+        return $this->deletePriv;
+    }
+
+    /**
+     * Set createPriv
+     *
+     * @param string $createPriv
+     *
+     * @return Db
+     */
+    public function setCreatePriv($createPriv)
+    {
+        $this->createPriv = $createPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get createPriv
+     *
+     * @return string
+     */
+    public function getCreatePriv()
+    {
+        return $this->createPriv;
+    }
+
+    /**
+     * Set dropPriv
+     *
+     * @param string $dropPriv
+     *
+     * @return Db
+     */
+    public function setDropPriv($dropPriv)
+    {
+        $this->dropPriv = $dropPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get dropPriv
+     *
+     * @return string
+     */
+    public function getDropPriv()
+    {
+        return $this->dropPriv;
+    }
+
+    /**
+     * Set grantPriv
+     *
+     * @param string $grantPriv
+     *
+     * @return Db
+     */
+    public function setGrantPriv($grantPriv)
+    {
+        $this->grantPriv = $grantPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get grantPriv
+     *
+     * @return string
+     */
+    public function getGrantPriv()
+    {
+        return $this->grantPriv;
+    }
+
+    /**
+     * Set referencesPriv
+     *
+     * @param string $referencesPriv
+     *
+     * @return Db
+     */
+    public function setReferencesPriv($referencesPriv)
+    {
+        $this->referencesPriv = $referencesPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get referencesPriv
+     *
+     * @return string
+     */
+    public function getReferencesPriv()
+    {
+        return $this->referencesPriv;
+    }
+
+    /**
+     * Set indexPriv
+     *
+     * @param string $indexPriv
+     *
+     * @return Db
+     */
+    public function setIndexPriv($indexPriv)
+    {
+        $this->indexPriv = $indexPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get indexPriv
+     *
+     * @return string
+     */
+    public function getIndexPriv()
+    {
+        return $this->indexPriv;
+    }
+
+    /**
+     * Set alterPriv
+     *
+     * @param string $alterPriv
+     *
+     * @return Db
+     */
+    public function setAlterPriv($alterPriv)
+    {
+        $this->alterPriv = $alterPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get alterPriv
+     *
+     * @return string
+     */
+    public function getAlterPriv()
+    {
+        return $this->alterPriv;
+    }
+
+    /**
+     * Set createTmpTablePriv
+     *
+     * @param string $createTmpTablePriv
+     *
+     * @return Db
+     */
+    public function setCreateTmpTablePriv($createTmpTablePriv)
+    {
+        $this->createTmpTablePriv = $createTmpTablePriv;
+
+        return $this;
+    }
+
+    /**
+     * Get createTmpTablePriv
+     *
+     * @return string
+     */
+    public function getCreateTmpTablePriv()
+    {
+        return $this->createTmpTablePriv;
+    }
+
+    /**
+     * Set lockTablesPriv
+     *
+     * @param string $lockTablesPriv
+     *
+     * @return Db
+     */
+    public function setLockTablesPriv($lockTablesPriv)
+    {
+        $this->lockTablesPriv = $lockTablesPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get lockTablesPriv
+     *
+     * @return string
+     */
+    public function getLockTablesPriv()
+    {
+        return $this->lockTablesPriv;
+    }
+
+    /**
+     * Set createViewPriv
+     *
+     * @param string $createViewPriv
+     *
+     * @return Db
+     */
+    public function setCreateViewPriv($createViewPriv)
+    {
+        $this->createViewPriv = $createViewPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get createViewPriv
+     *
+     * @return string
+     */
+    public function getCreateViewPriv()
+    {
+        return $this->createViewPriv;
+    }
+
+    /**
+     * Set showViewPriv
+     *
+     * @param string $showViewPriv
+     *
+     * @return Db
+     */
+    public function setShowViewPriv($showViewPriv)
+    {
+        $this->showViewPriv = $showViewPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get showViewPriv
+     *
+     * @return string
+     */
+    public function getShowViewPriv()
+    {
+        return $this->showViewPriv;
+    }
+
+    /**
+     * Set createRoutinePriv
+     *
+     * @param string $createRoutinePriv
+     *
+     * @return Db
+     */
+    public function setCreateRoutinePriv($createRoutinePriv)
+    {
+        $this->createRoutinePriv = $createRoutinePriv;
+
+        return $this;
+    }
+
+    /**
+     * Get createRoutinePriv
+     *
+     * @return string
+     */
+    public function getCreateRoutinePriv()
+    {
+        return $this->createRoutinePriv;
+    }
+
+    /**
+     * Set alterRoutinePriv
+     *
+     * @param string $alterRoutinePriv
+     *
+     * @return Db
+     */
+    public function setAlterRoutinePriv($alterRoutinePriv)
+    {
+        $this->alterRoutinePriv = $alterRoutinePriv;
+
+        return $this;
+    }
+
+    /**
+     * Get alterRoutinePriv
+     *
+     * @return string
+     */
+    public function getAlterRoutinePriv()
+    {
+        return $this->alterRoutinePriv;
+    }
+
+    /**
+     * Set executePriv
+     *
+     * @param string $executePriv
+     *
+     * @return Db
+     */
+    public function setExecutePriv($executePriv)
+    {
+        $this->executePriv = $executePriv;
+
+        return $this;
+    }
+
+    /**
+     * Get executePriv
+     *
+     * @return string
+     */
+    public function getExecutePriv()
+    {
+        return $this->executePriv;
+    }
+
+    /**
+     * Set eventPriv
+     *
+     * @param string $eventPriv
+     *
+     * @return Db
+     */
+    public function setEventPriv($eventPriv)
+    {
+        $this->eventPriv = $eventPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get eventPriv
+     *
+     * @return string
+     */
+    public function getEventPriv()
+    {
+        return $this->eventPriv;
+    }
+
+    /**
+     * Set triggerPriv
+     *
+     * @param string $triggerPriv
+     *
+     * @return Db
+     */
+    public function setTriggerPriv($triggerPriv)
+    {
+        $this->triggerPriv = $triggerPriv;
+
+        return $this;
+    }
+
+    /**
+     * Get triggerPriv
+     *
+     * @return string
+     */
+    public function getTriggerPriv()
+    {
+        return $this->triggerPriv;
+    }
+}

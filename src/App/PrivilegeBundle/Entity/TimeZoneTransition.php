@@ -38,5 +38,76 @@ class TimeZoneTransition
     private $transitionTypeId;
 
 
-}
 
+    /**
+     * Set timeZoneId
+     *
+     * @param integer $timeZoneId
+     *
+     * @return TimeZoneTransition
+     */
+    public function setTimeZoneId($timeZoneId)
+    {
+        $this->timeZoneId = $timeZoneId;
+
+        return $this;
+    }
+
+    /**
+     * Get timeZoneId
+     *
+     * @return integer
+     */
+    public function getTimeZoneId()
+    {
+        return $this->timeZoneId;
+    }
+
+    /**
+     * Set transitionTime
+     *
+     * @param integer $transitionTime
+     *
+     * @return TimeZoneTransition
+     */
+    public function setTransitionTime($transitionTime)
+    {
+        $this->transitionTime = $transitionTime;
+
+        return $this;
+    }
+
+    /**
+     * Get transitionTime
+     *
+     * @return integer
+     */
+    public function getTransitionTime()
+    {
+        return $this->transitionTime;
+    }
+
+    /**
+     * Set transitionTypeId
+     *
+     * @param integer $transitionTypeId
+     *
+     * @return TimeZoneTransition
+     */
+    public function setTransitionTypeId($transitionTypeId)
+    {
+        $this->transitionTypeId = $transitionTypeId;
+
+        return $this;
+    }
+
+    /**
+     * Get transitionTypeId
+     *
+     * @return integer
+     */
+    public function getTransitionTypeId()
+    {
+        return $this->transitionTypeId;
+    }
+}

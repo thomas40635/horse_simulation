@@ -99,5 +99,278 @@ class SlaveWorkerInfo
     private $checkpointGroupBitmap;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set relayLogName
+     *
+     * @param string $relayLogName
+     *
+     * @return SlaveWorkerInfo
+     */
+    public function setRelayLogName($relayLogName)
+    {
+        $this->relayLogName = $relayLogName;
+
+        return $this;
+    }
+
+    /**
+     * Get relayLogName
+     *
+     * @return string
+     */
+    public function getRelayLogName()
+    {
+        return $this->relayLogName;
+    }
+
+    /**
+     * Set relayLogPos
+     *
+     * @param integer $relayLogPos
+     *
+     * @return SlaveWorkerInfo
+     */
+    public function setRelayLogPos($relayLogPos)
+    {
+        $this->relayLogPos = $relayLogPos;
+
+        return $this;
+    }
+
+    /**
+     * Get relayLogPos
+     *
+     * @return integer
+     */
+    public function getRelayLogPos()
+    {
+        return $this->relayLogPos;
+    }
+
+    /**
+     * Set masterLogName
+     *
+     * @param string $masterLogName
+     *
+     * @return SlaveWorkerInfo
+     */
+    public function setMasterLogName($masterLogName)
+    {
+        $this->masterLogName = $masterLogName;
+
+        return $this;
+    }
+
+    /**
+     * Get masterLogName
+     *
+     * @return string
+     */
+    public function getMasterLogName()
+    {
+        return $this->masterLogName;
+    }
+
+    /**
+     * Set masterLogPos
+     *
+     * @param integer $masterLogPos
+     *
+     * @return SlaveWorkerInfo
+     */
+    public function setMasterLogPos($masterLogPos)
+    {
+        $this->masterLogPos = $masterLogPos;
+
+        return $this;
+    }
+
+    /**
+     * Get masterLogPos
+     *
+     * @return integer
+     */
+    public function getMasterLogPos()
+    {
+        return $this->masterLogPos;
+    }
+
+    /**
+     * Set checkpointRelayLogName
+     *
+     * @param string $checkpointRelayLogName
+     *
+     * @return SlaveWorkerInfo
+     */
+    public function setCheckpointRelayLogName($checkpointRelayLogName)
+    {
+        $this->checkpointRelayLogName = $checkpointRelayLogName;
+
+        return $this;
+    }
+
+    /**
+     * Get checkpointRelayLogName
+     *
+     * @return string
+     */
+    public function getCheckpointRelayLogName()
+    {
+        return $this->checkpointRelayLogName;
+    }
+
+    /**
+     * Set checkpointRelayLogPos
+     *
+     * @param integer $checkpointRelayLogPos
+     *
+     * @return SlaveWorkerInfo
+     */
+    public function setCheckpointRelayLogPos($checkpointRelayLogPos)
+    {
+        $this->checkpointRelayLogPos = $checkpointRelayLogPos;
+
+        return $this;
+    }
+
+    /**
+     * Get checkpointRelayLogPos
+     *
+     * @return integer
+     */
+    public function getCheckpointRelayLogPos()
+    {
+        return $this->checkpointRelayLogPos;
+    }
+
+    /**
+     * Set checkpointMasterLogName
+     *
+     * @param string $checkpointMasterLogName
+     *
+     * @return SlaveWorkerInfo
+     */
+    public function setCheckpointMasterLogName($checkpointMasterLogName)
+    {
+        $this->checkpointMasterLogName = $checkpointMasterLogName;
+
+        return $this;
+    }
+
+    /**
+     * Get checkpointMasterLogName
+     *
+     * @return string
+     */
+    public function getCheckpointMasterLogName()
+    {
+        return $this->checkpointMasterLogName;
+    }
+
+    /**
+     * Set checkpointMasterLogPos
+     *
+     * @param integer $checkpointMasterLogPos
+     *
+     * @return SlaveWorkerInfo
+     */
+    public function setCheckpointMasterLogPos($checkpointMasterLogPos)
+    {
+        $this->checkpointMasterLogPos = $checkpointMasterLogPos;
+
+        return $this;
+    }
+
+    /**
+     * Get checkpointMasterLogPos
+     *
+     * @return integer
+     */
+    public function getCheckpointMasterLogPos()
+    {
+        return $this->checkpointMasterLogPos;
+    }
+
+    /**
+     * Set checkpointSeqno
+     *
+     * @param integer $checkpointSeqno
+     *
+     * @return SlaveWorkerInfo
+     */
+    public function setCheckpointSeqno($checkpointSeqno)
+    {
+        $this->checkpointSeqno = $checkpointSeqno;
+
+        return $this;
+    }
+
+    /**
+     * Get checkpointSeqno
+     *
+     * @return integer
+     */
+    public function getCheckpointSeqno()
+    {
+        return $this->checkpointSeqno;
+    }
+
+    /**
+     * Set checkpointGroupSize
+     *
+     * @param integer $checkpointGroupSize
+     *
+     * @return SlaveWorkerInfo
+     */
+    public function setCheckpointGroupSize($checkpointGroupSize)
+    {
+        $this->checkpointGroupSize = $checkpointGroupSize;
+
+        return $this;
+    }
+
+    /**
+     * Get checkpointGroupSize
+     *
+     * @return integer
+     */
+    public function getCheckpointGroupSize()
+    {
+        return $this->checkpointGroupSize;
+    }
+
+    /**
+     * Set checkpointGroupBitmap
+     *
+     * @param string $checkpointGroupBitmap
+     *
+     * @return SlaveWorkerInfo
+     */
+    public function setCheckpointGroupBitmap($checkpointGroupBitmap)
+    {
+        $this->checkpointGroupBitmap = $checkpointGroupBitmap;
+
+        return $this;
+    }
+
+    /**
+     * Get checkpointGroupBitmap
+     *
+     * @return string
+     */
+    public function getCheckpointGroupBitmap()
+    {
+        return $this->checkpointGroupBitmap;
+    }
+}

@@ -1,0 +1,18 @@
+{% extends '@AppAdmin/base.html.twig' %}
+{% block body %}
+    <p>Surveillance du serveur MySQL</p>
+    <ul>
+        <li>
+            <a id="statistic" href="{{ path('statistic') }}">Voir les processus en cours</a>
+        </li>
+        <li>
+            <a id="diagnostic" href="{{ path('diagnostic') }}">Voir les diagnostiques à réaliser</a>
+        </li>
+    </ul>
+
+    <a href="{{ path('index') }}">
+        <button class="topleft-button">Retour</button>
+    </a>
+{% endblock %}
+
+

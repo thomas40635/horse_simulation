@@ -29,5 +29,38 @@ class Plugin
     private $dl = '';
 
 
-}
 
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set dl
+     *
+     * @param string $dl
+     *
+     * @return Plugin
+     */
+    public function setDl($dl)
+    {
+        $this->dl = $dl;
+
+        return $this;
+    }
+
+    /**
+     * Get dl
+     *
+     * @return string
+     */
+    public function getDl()
+    {
+        return $this->dl;
+    }
+}
