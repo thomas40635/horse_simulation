@@ -1,4 +1,5 @@
 #!/bin/bash
 
-echo "\nSTART : \n"
-$(/etc/rc.d/init.d/mysql start)
+echo "START :
+"
+$(/etc/init.d/mariadb start)

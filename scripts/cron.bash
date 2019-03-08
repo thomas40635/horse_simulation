@@ -1,6 +1,8 @@
 #!/bin/bash
 
 tables=$(ls /var/lib/mysql/horse_simulation/ | grep .MYI)
+date=$(date +%D)
+$(echo "$date" >> log-optimisation.log)
 if  [[ ! -z "$tables" ]]
     then
 		# Vérifier les tables
@@ -11,7 +13,7 @@ if  [[ ! -z "$tables" ]]
 
 
 		# Optimiser les tables
-		# -a optimise les tables
+		# -a optimise les tablesà
 		# -s trie l'arbre des index
 		optimiseTables=$(myisamchk -a -s /var/lib/mysql/horse_simulation/*.MYI)
 		$(echo "$optimiseTables" >> log-optimisation.log)
