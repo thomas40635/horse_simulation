@@ -13,7 +13,7 @@ if  [[ ! -z "$tables" ]]
 
 
 		# Optimiser les tables
-		# -a optimise les tablesà
+		# -a optimise les tables
 		# -s trie l'arbre des index
 		optimiseTables=$(myisamchk -a -s /var/lib/mysql/horse_simulation/*.MYI)
 		$(echo "$optimiseTables" >> log-optimisation.log)
