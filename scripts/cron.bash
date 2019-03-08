@@ -25,7 +25,13 @@ if  [[ ! -z "$tables" ]]
 		$(echo "$defragTables" >> log-optimisation.log)
 
         #On recharge les tables
-        $(mysqladmin -u automate -pautomatepw flush-tables)
+        mysqladmin -u admin -padminpw flush-tables
+        mysqladmin -u admin -padminpw  flush-tables
+        mysqladmin -u admin -padminpw  flush-logs
+        mysqladmin -u admin -padminpw  refresh
+        mysqladmin -u admin -padminpw  flush-status
+        mysqladmin -u admin -padminpw  flush-privileges
+        mysqladmin -u admin -padminpw  flush-hosts
     else
 		echo "Il n'y a pas de fichier myisam dans la base."
 fi
