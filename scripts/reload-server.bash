@@ -1,4 +1,5 @@
 #!/bin/bash
 
-echo "\nRELOAD : \n"
-mysqladmin -u automate -pautomate reload
+echo "RELOAD :
+"
+mysqladmin -u automate -pautomatepw reload
