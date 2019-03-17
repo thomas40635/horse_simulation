@@ -2,4 +2,4 @@
 
 echo "START :
 "
-$(/etc/init.d/mariadb start)
+$(/etc/init.d/mysql start)
