@@ -2,12 +2,8 @@
 
 echo "STATUS :
 "
-mysqladmin -u root -proot status
+mysqladmin -u root -prootpw status
 echo "
 VARIABLES
 "
-mysqladmin -u root -proot variables
-
-echo "
-VARIABLES
-"
+mysqladmin -u root -prootpw variables

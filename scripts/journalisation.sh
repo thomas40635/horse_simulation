@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "\JOURNALISATION : \n"
-mysqladmin -u root -proot status
+mysqladmin -u root -prootpw status
