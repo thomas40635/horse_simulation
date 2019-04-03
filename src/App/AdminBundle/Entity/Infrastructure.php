@@ -29,9 +29,9 @@ class Infrastructure
     private $id;
 
     /**
-     * @var \App\AdminBundle\Entity\RidingSchool
+     * @var \App\AdminBundle\Entity\Club
      *
-     * @ORM\ManyToOne(targetEntity="App\AdminBundle\Entity\RidingSchool")
+     * @ORM\ManyToOne(targetEntity="App\AdminBundle\Entity\Club")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_club", referencedColumnName="id")
      * })
@@ -97,11 +97,11 @@ class Infrastructure
     /**
      * Set idClub
      *
-     * @param \App\AdminBundle\Entity\RidingSchool $idClub
+     * @param \App\AdminBundle\Entity\Club $idClub
      *
      * @return Infrastructure
      */
-    public function setIdClub(\App\AdminBundle\Entity\RidingSchool $idClub = null)
+    public function setIdClub(\App\AdminBundle\Entity\Club $idClub = null)
     {
         $this->idClub = $idClub;
 
@@ -111,7 +111,7 @@ class Infrastructure
     /**
      * Get idClub
      *
-     * @return \App\AdminBundle\Entity\RidingSchool
+     * @return \App\AdminBundle\Entity\Club
      */
     public function getIdClub()
     {
