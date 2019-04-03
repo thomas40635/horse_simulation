@@ -2,4 +2,4 @@
 
 echo "START
 "
-systemctl start mysql
+/etc/init.d/mysql start
