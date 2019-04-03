@@ -3,7 +3,7 @@ $(document).ready(function () {
     showprocess.on('click', function(event){
         event.preventDefault();
         $.ajax({
-            url: "/showprocess",
+            url: "showprocess",
             success: function (response) {
                 var div = document.createElement('div');
                 $(div).addClass('message');
@@ -19,7 +19,7 @@ $(document).ready(function () {
         event.preventDefault();
         var data = $('#process');
         $.ajax({
-            url: "/killprocess",
+            url: "killprocess",
             data: data,
             success: function (response) {
                 var div = document.createElement('div');
