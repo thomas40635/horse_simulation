@@ -36,18 +36,13 @@ $(document).ready(function () {
     statistic.on('click', function(event){
         event.preventDefault();
         $.ajax({
-            url: "/horse_simulation/web/statistic",
+            url: "statistic",
             success: function (response) {
                 var div = document.createElement('div');
                 $(div).addClass('message');
-                div.append(response);
-                console.log(statistic.nextElementSibling.className);
-                if(statistic.nextElementSibling){
-                    statistic.nextElementSibling.append(div);
-                }else{
-                    statistic.after(div);
-                }
 
+                div.append(response);
+                diagnostic.after(div);
             }
         });
     });
@@ -56,7 +51,7 @@ $(document).ready(function () {
     diagnostic.on('click', function(event){
         event.preventDefault();
         $.ajax({
-            url: "app.php/diagnostic",
+            url: "diagnostic",
             success: function (response) {
                 var div = document.createElement('div');
                 $(div).addClass('message');
