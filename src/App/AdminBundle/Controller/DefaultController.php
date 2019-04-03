@@ -106,7 +106,7 @@ class DefaultController extends Controller
      */
     public function KillProcessAction(Request $request)
     {
-        $messages = shell_exec("/var/www/html/scripts/show-process.bash ".$request->get('process'));
+        $messages = shell_exec("/var/www/html/scripts/kill-process.bash ".$request->get('process'));
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
