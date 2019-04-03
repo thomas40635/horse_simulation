@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "START :
+echo "START
 "
-$(/etc/init.d/mysql start)
+/etc/init.d/mysql start
