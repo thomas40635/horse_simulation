@@ -2,5 +2,5 @@
 
 numProcess=$1
 echo "$numProcess"
-$(mysql -u root -prootpw;)
+$(mysql -u useroptimisation -puseroptimisationpw;)
 $(KILL "$numProcess")

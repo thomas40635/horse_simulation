@@ -1,76 +1,146 @@
-<<<<<<< HEAD
-Symfony Standard Edition
+Projet d'optimisation et de gestion de Bases de données
+
+Projet réalisée dans le cadre du cours de Système d'Information et Bases de Données de M. MARTIN-NEVOT
+Aix Marseille Université - 2018/2019
+
 ========================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+PIZZIMENTI Sandrine
 
-What's inside?
+PAUL Thomas
+
+MARTIN Laurie
+
+
+Lancer une VM
 --------------
+  
+**Login** : root 
 
-The Symfony Standard Edition is configured with the following defaults:
+**Mot de passe**: root
 
-  * An AppBundle you can use to start coding;
+Il est possible d'utiliser VirtualBox d'Oracle pour lancer une VM:
 
-  * Twig as the only configured template engine;
+* Lancer VirtualBox
 
-  * Doctrine ORM/DBAL;
+* Cliquer sur Fichier > Importer un appareil virtuel
 
-  * Swiftmailer;
+* Chercher le fichier .ovf correspondant à la VM "MASTER VM Debian LAMP" (et/ou la "VM SLAVE VM Debian LAMP")
 
-  * Annotations enabled for everything.
+* Cliquer sur importer
 
-It comes pre-configured with the following bundles:
+* La VM va s'afficher dans la liste
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+* Double-cliquer sur le titre pour lancer la VM
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+Lancer l'application 
+-------------
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+* Lancer la VM et se connecter
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+* Taper ifconfig pour connaître l'adresse IP
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+* Taper l'adresse dans la barre du navigateur sur la machine hôte
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+* Taper "/..." et appuyer sur entrer
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
 
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
+Lancer la réplication
+-------------
 
-  * [**SensioGeneratorBundle**][13] (in dev env) - Adds code generation
-    capabilities
+La réplication nécessite de vérifier la configuration avant de pouvoir l'utiliser :
 
-  * [**WebServerBundle**][14] (in dev env) - Adds commands for running applications
-    using the PHP built-in web server
+* Lancer les VM "MASTER VM Debian LAMP" et "SLAVE VM Debian LAMP"
 
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
+**Sur le MASTER**
+* Vérifier l'adresse IP avec ifconfig
 
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
+* Taper vim /etc/mysql/my.cnf
 
-Enjoy!
+* Modifier, si nécessaire, la valeur de la variable bind-address avec l'adresse IP de la machine.
 
-[1]:  https://symfony.com/doc/3.4/setup.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/3.4/doctrine.html
-[8]:  https://symfony.com/doc/3.4/templating.html
-[9]:  https://symfony.com/doc/3.4/security.html
-[10]: https://symfony.com/doc/3.4/email.html
-[11]: https://symfony.com/doc/3.4/logging.html
-[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
-[14]: https://symfony.com/doc/current/setup/built_in_web_server.html
-=======
-# horse_simulation
->>>>>>> 4766baa272f859fcaa16014fbd26d8e1b6e61be4
+* Relancer le serveur mysql avec :
+
+/etc/init.d/mysql stop puis
+/etc/init.d/ mysql start
+
+* Se connecter à mysql avec l'utilisateur replication : **mysql -u replication -preplicationpw**
+
+* Taper SHOW MASTER STATUS;
+
+* Retenir les information File et Position, elles serviront pour la configuration du SLAVE. Les autres doivent rester vides.
+
+**Sur le SLAVE**
+
+* Vérifier l'adresse IP avec ifconfig
+
+* Taper vim /etc/mysql/my.cnf
+
+* Modifier, si nécessaire, la valeur de la variable bind-address avec l'adresse IP de la machine
+
+* Relancer le serveur mysql avec :
+
+**/etc/init.d/mysql stop** puis
+**/etc/init.d/ mysql start**
+
+* Se connecter à mysql avec l'utilisateur replication : **mysql -u replication -preplicationpw**
+
+* Taper : STOP SLAVE;
+
+* Taper la commande suivant en remplaçant les données pour  MASTER_LOG_FILE avec les infos File du MASTER et MASTER_LOG_POS avec les infosnPosition du MASTER. Puis l'adresse IP de MASTER_HOST doit correspondre à l'adresse IP du MASTER. Cela donne la commande suivante :
+
+CHANGE MASTER TO MASTER_HOST='**192.168.xxx.xxx**',
+MASTER_USER='replication', 
+MASTER_PASSWORD='replicationpw', 
+MASTER_LOG_FILE='**File**', 
+MASTER_LOG_POS=**Position** ;
+
+* Taper START SLAVE;
+
+* Taper SHOW SLAVE STATUS\G pour afficher les informations. Il ne devrait pas y avoir d'erreur.
+
+* La réplication fonctionne. Il est possible de la tester en ajoutant des données sur la machine MASTER
+
+Les comptes pour l'appli
+-------------
+Ils ont tous les mêmes droits :
+
+**login** : admin, **password** : adminpw
+
+**login** : useroptimisation, **password** : useroptimisationpw
+
+**login** : automate, **password** : automatepw
+
+**login** : dev, **password** : devpw
+
+**login** : moderator, **password** : moderatorpw
+
+**login** : specialist, **password** : specialistpw
+
+**login** : adminshow, **password** : adminshowpw
+
+**login** : editor, **password** : editorpw
+
+**login** : client, **password** : clientpw
+
+
+Les URI utilisées
+------------
+
+**phpMyAdmin** :
+
+192.168.xxx.xxx/phpmyadmin
+
+**Page d'administration** :
+
+192.168.xxx.xxx/admin/dashboard
+
+**Actions sur le serveur** :
+
+192.168.xxx.xxx/server
+
+**Politique de surveillance** :
+
+192.168.xxx.xxx/surveillance

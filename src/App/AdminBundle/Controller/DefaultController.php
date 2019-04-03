@@ -40,7 +40,7 @@ class DefaultController extends Controller
      */
     public function StartServerAction()
     {
-        $messages = shell_exec("/www/horse_simulation/scripts/start-server.bash");
+        $messages = shell_exec("/www/html/scripts/start-server.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -56,7 +56,7 @@ class DefaultController extends Controller
      */
     public function StopServerAction()
     {
-        $messages = shell_exec("/www/horse_simulation/scripts/stop-server.bash");
+        $messages = shell_exec("/www/html/scripts/stop-server.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -72,7 +72,7 @@ class DefaultController extends Controller
      */
     public function ReloadServerAction()
     {
-        $messages = shell_exec("/www/horse_simulation/scripts/reload-server.bash");
+        $messages = shell_exec("/www/html/scripts/reload-server.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -88,7 +88,7 @@ class DefaultController extends Controller
      */
     public function ShowProcessAction()
     {
-        $messages = shell_exec("/www/horse_simulation/scripts/show-process.bash");
+        $messages = shell_exec("/www/html/scripts/show-process.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -106,7 +106,7 @@ class DefaultController extends Controller
      */
     public function KillProcessAction(Request $request)
     {
-        $messages = shell_exec("/www/horse_simulation/scripts/show-process.bash ".$request->get('process'));
+        $messages = shell_exec("/www/html/scripts/show-process.bash ".$request->get('process'));
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -137,7 +137,7 @@ class DefaultController extends Controller
      */
     public function StatisticAction()
     {
-        $messages = shell_exec("/www/horse_simulation/scripts/surveillance-statistique.bash");
+        $messages = shell_exec("/www/html/scripts/surveillance-statistique.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
@@ -153,7 +153,7 @@ class DefaultController extends Controller
      */
     public function DiagnosticAction()
     {
-        $messages = shell_exec("/www/horse_simulation/scripts/surveillance-diagnostic.bash");
+        $messages = shell_exec("/www/html/scripts/surveillance-diagnostic.bash");
         if($messages == null){
             $messages = "La commande ne fonctionne pas.";
         }
