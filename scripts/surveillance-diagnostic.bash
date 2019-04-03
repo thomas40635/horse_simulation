@@ -2,8 +2,8 @@
 
 echo "STATUS :
 "
-mysqladmin -u root -prootpw status
+mysqladmin -u useroptimisation -puseroptimisationpw status
 echo "
 VARIABLES
 "
-mysqladmin -u root -prootpw variables
+mysqladmin -u useroptimisation -puseroptimisationpw variables
