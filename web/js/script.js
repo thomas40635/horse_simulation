@@ -56,7 +56,7 @@ $(document).ready(function () {
     diagnostic.on('click', function(event){
         event.preventDefault();
         $.ajax({
-            url: "/diagnostic",
+            url: "app.php/diagnostic",
             success: function (response) {
                 var div = document.createElement('div');
                 $(div).addClass('message');
