@@ -1,4 +1,6 @@
 #!/bin/bash
 
-echo "\nLISTE DES PROCESSUS: \n"
+echo "LISTE DES PROCESSUS:
+
+"
 mysqladmin -u useroptimisation -puseroptimisationpw processlist
