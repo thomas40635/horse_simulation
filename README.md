@@ -38,13 +38,24 @@ Il est possible d'utiliser VirtualBox d'Oracle pour lancer une VM:
 Lancer l'application 
 -------------
 
+D'abord, il faut configurer la connexion à la Base de données. 
+
 * Lancer la VM et se connecter
 
 * Taper ifconfig pour connaître l'adresse IP
 
-* Taper l'adresse dans la barre du navigateur sur la machine hôte
+* Ouvrir le fichier parameters.yml :
+vi /var/www/html/app/config/parameters.yml
 
-* Taper "/..." et appuyer sur entrer
+* Modifier si nécessaire le paramètre database_host avec l'adresse ip de la VM.
+
+* Enregistrer (ESC + :wq + entrée)
+
+Ensuite, ouvrir un navigateur depuis la machine hôte :
+
+* Taper l'adresse dans la barre du navigateur
+
+* Entrer, l'application se lance
 
 
 Lancer la réplication
