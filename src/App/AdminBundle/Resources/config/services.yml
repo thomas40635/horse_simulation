@@ -157,3 +157,10 @@ services:
     arguments: [~ , App\AdminBundle\Entity\Task, ~]
     tags:
       - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation',  label: 'Task', show_mosaic_button: false }
+
+  admin.story:
+    public: true
+    class: App\Admin\StoryAdmin
+    arguments: [~ , App\AdminBundle\Entity\Story, ~]
+    tags:
+      - { name: 'sonata.admin', manager_type: 'orm', group: 'Tables horse-simulation',  label: 'Story', show_mosaic_button: false }

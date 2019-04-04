@@ -17,7 +17,7 @@ parameters:
     database_port2: null
     database_name2: horse_simulation
     database_user2: root
-    database_password2: smtp
+    database_password2: rootpw
     mailer_transport2: smtp
     mailer_host2: 192.168.43.172
     mailer_user2: null
