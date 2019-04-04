@@ -27,9 +27,9 @@ class Disease
     private $description;
 
     /**
-     * @var \DateTime
+     * @var integer
      *
-     * @ORM\Column(name="duration", type="date", nullable=false)
+     * @ORM\Column(name="duration", type="integer", nullable=false)
      */
     private $duration;
 

@@ -1,6 +1,7 @@
 <?php
 namespace App\Admin;
 
+use Doctrine\DBAL\Types\IntegerType;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -15,7 +16,7 @@ final class ParasiteAdmin extends AbstractAdmin
         $formMapper
             ->add('label', TextType::class)
             ->add('description', TextType::class)
-            ->add('duration', DateType::class)
+            ->add('duration', IntegerType::class)
         ;
     }
 
