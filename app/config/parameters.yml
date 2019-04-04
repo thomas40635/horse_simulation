@@ -1,22 +1,25 @@
 # This file is auto-generated during the composer install
 parameters:
-    database_host: 127.0.0.1
+    # First Database
+    database_host: 192.168.43.172
     database_port: null
     database_name: mysql
     database_user: root
-    database_password: null
+    database_password: rootpw
     mailer_transport: smtp
-    mailer_host: 127.0.0.1
+    mailer_host: 192.168.43.172
     mailer_user: null
     mailer_password: null
     secret: ThisTokenIsNotSoSecretChangeIt
-    database_host2: 127.0.0.1
+
+    # Second Database
+    database_host2: 192.168.43.172
     database_port2: null
     database_name2: horse_simulation
     database_user2: root
-    database_password2: null
+    database_password2: smtp
     mailer_transport2: smtp
-    mailer_host2: 127.0.0.1
+    mailer_host2: 192.168.43.172
     mailer_user2: null
     mailer_password2: null
     secret2: ThisTokenIsNotSoSecretChangeIt
