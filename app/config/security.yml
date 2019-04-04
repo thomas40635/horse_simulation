@@ -14,6 +14,7 @@ security:
             memory:
                 users:
                     admin: { password: adminpw, roles: ['ROLE_ADMIN'] }
+                    adminPrivilege: { password: adminprivilegepw, roles: ['ROLE_ADMIN'] }
                     useroptimisation: { password: useroptimisationpw, roles: ['ROLE_ADMIN'] }
                     automate: { password: automatepw, roles: ['ROLE_ADMIN'] }
                     dev: { password: devpw, roles: ['ROLE_ADMIN'] }
