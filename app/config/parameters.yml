@@ -7,7 +7,7 @@ parameters:
     database_user: root
     database_password: rootpw
     mailer_transport: smtp
-    mailer_host: 127.0.0.1
+    mailer_host: 192.168.43.172
     mailer_user: null
     mailer_password: null
     secret: ThisTokenIsNotSoSecretChangeIt
@@ -19,7 +19,7 @@ parameters:
     database_user2: root
     database_password2: smtp
     mailer_transport2: smtp
-    mailer_host2: 127.0.0.1
+    mailer_host2: 192.168.43.172
     mailer_user2: null
     mailer_password2: null
     secret2: ThisTokenIsNotSoSecretChangeIt
